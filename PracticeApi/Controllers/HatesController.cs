@@ -5,7 +5,7 @@ namespace PracticeApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GreetController : ControllerBase
+    public class HatesController : ControllerBase
     {
     }
 }
