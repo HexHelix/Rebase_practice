@@ -1,6 +1,6 @@
-#<b>Explaination of each layer:</b>
+# Explaination of each layer:
 
-##DataAccessLayer (DAL)
+## DataAccessLayer (DAL)
 
 This layer, as the name suggests, is responsible for interacting with the data source, which could be a database, a file system, or an external service.
 It encapsulates logic for CRUD (Create, Read, Update, Delete) operations on the data source.
@@ -8,23 +8,24 @@ The Entity folder likely contains classes that represent the data model. These c
 The DBServices folder likely contains interfaces and concrete classes that perform data access operations. These classes might use Entity Framework or Dapper to interact with the database.
 The IDBServices folder likely contains interfaces that define the contracts for the data access operations. This promotes loose coupling between the DAL and other layers.
 
-##<b>CommonLayer</b>
+## CommonLayer
 
 This layer contains classes that are used by other layers in the application.
 It could contain helper classes, validation logic, or any other reusable functionality that doesn't belong to a specific domain.
 The RequestModel and ResponseModel folders likely contain classes that define the data contracts for API requests and responses. This promotes strong typing and improves code maintainability.
 
-##BusinessLogicLayer (BLL)
+## BusinessLogicLayer (BLL)
 
 This layer contains the core business logic of the application. It orchestrates the calls to the data access layer and other services.
 The BusinessServices folder likely contains classes that implement the business logic for the API endpoints. These classes might call methods on the data access layer to retrieve or manipulate data.
 The IBusinessServices folder likely contains interfaces that define the contracts for the business logic. This promotes loose coupling between the BLL and other layers.
 
-P##racticeApi
+## PracticeApi
 
 This project contains the ASP.NET Web API application itself.
 It will contain controllers that map to API endpoints and delegate calls to the business logic layer.
-Data Flow
+
+## Data Flow
 
 An API request arrives at the web API application.
 The controller in the PracticeApi project deserializes the request body into a request model class defined in the CommonLayer.
